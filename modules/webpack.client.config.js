@@ -87,7 +87,7 @@ function getFileName() {
 }
 
 function getDevTool() {
-  return PROD ? 'sourcemap' : 'cheap-module-eval-source-map'
+  return PROD ? 'sourcemap' : 'cheap-module-source-map'
 }
 
 function getBabelLoader() {
