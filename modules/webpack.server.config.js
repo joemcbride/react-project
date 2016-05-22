@@ -54,7 +54,7 @@ export default {
         exclude: /node_modules/
       },
       { test: SHARED.CSS_REGEX,
-        loader: `css-loader/locals?${SHARED.CSS_LOADER_QUERY}!postcss-loader`
+        loader: `css-loader/locals?${SHARED.CSS_LOADER_QUERY}!postcss-loader!${SHARED.SASS_LOADER_QUERY}`
       }
     ]
   },
@@ -63,12 +63,8 @@ export default {
     new webpack.BannerPlugin(
       'require("source-map-support").install();',
       { raw: true, entryOnly: false }
-    ),
-    new webpack.ProvidePlugin({
-      fetch: 'node-fetch'
-    })
+    )
   ]
-
 }
 
 function getExternals() {
@@ -89,4 +85,3 @@ function getExternals() {
     }
   ]
 }
-

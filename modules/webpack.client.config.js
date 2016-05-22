@@ -74,10 +74,10 @@ function getCSSLoader() {
   if (PROD || SERVER_RENDERING) {
     loader.loader = ExtractTextPlugin.extract(
       'style-loader',
-      `css-loader?${SHARED.CSS_LOADER_QUERY}!postcss-loader`
+      `css-loader?${SHARED.CSS_LOADER_QUERY}!postcss-loader!${SHARED.SASS_LOADER_QUERY}`
     )
   } else {
-    loader.loader = `style-loader!css-loader?${SHARED.CSS_LOADER_QUERY}!postcss-loader`
+    loader.loader = `style-loader!css-loader?${SHARED.CSS_LOADER_QUERY}!postcss-loader!${SHARED.SASS_LOADER_QUERY}`
   }
   return loader
 }
@@ -150,4 +150,3 @@ function getPlugins() {
 
   return plugins
 }
-
