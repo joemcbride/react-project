@@ -9,12 +9,12 @@
     "webpack": "webpack.config.js"
   },
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run react-project:start:prod || npm run react-project:start:dev",
+    "start": "if-env NODE_ENV=production && npm run react-project:start:prod || npm run mon",
     "test": "karma start",
     "react-project:start:dev": "eslint modules && react-project start",
     "react-project:start:prod": "rm -rf .build && react-project build && node .build/server.js",
     "postinstall": "babel ./node_modules/react-project/modules --out-dir ./node_modules/react-project/lib",
-    "mon": "nodemon --exec 'npm start'"
+    "mon": "nodemon --exec 'npm run react-project:start:dev'"
   },
   "author": "",
   "license": "ISC",
