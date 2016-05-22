@@ -54,7 +54,7 @@
     "postcss-loader": "0.8.1",
     "react": "0.14.7",
     "react-dom": "0.14.7",
-    "react-project": "0.0.30",
+    "react-project": "joemcbride/react-project#updates",
     "react-redux": "4.4.5",
     "react-router": "2.0.0",
     "react-title-component": "1.0.1",
