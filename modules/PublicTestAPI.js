@@ -36,7 +36,7 @@ export function KarmaConf(config) {
           { test: /modules\/api\//,
             loader: 'null-loader'
           }
-        ],
+        ]
       },
       plugins: [
         new webpack.DefinePlugin({
@@ -53,4 +53,3 @@ export function KarmaConf(config) {
   })
 
 }
-
