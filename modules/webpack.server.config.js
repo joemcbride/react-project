@@ -63,7 +63,12 @@ export default {
     new webpack.BannerPlugin(
       'require("source-map-support").install();',
       { raw: true, entryOnly: false }
-    )
+    ),
+    new webpack.DefinePlugin({
+      __CLIENT__: false,
+      __SERVER__: true,
+      __DEVTOOLS__: false
+    })
   ]
 }
 
