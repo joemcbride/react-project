@@ -130,8 +130,9 @@ function getPlugins() {
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) },
       __CLIENT__: true,
-      __SERVER__: false,
-      __DEVTOOLS__: true
+      __DEV__: process.env.NODE_ENV === 'development',
+      __DEVTOOLS__: true,
+      __SERVER__: false
     }),
     new webpack.optimize.CommonsChunkPlugin('_vendor', PROD ? `vendor-${HASH}.js` : 'vendor.js')
   ]

@@ -1,7 +1,10 @@
 {
   "extends": "rackt",
   "globals": {
-    "__DEV__": true
+    "__DEV__": true,
+    "__DEVTOOLS__": true,
+    "__CLIENT__": false,
+    "__SERVER__": false
   },
   "rules": {
     "react/jsx-uses-react": 1,

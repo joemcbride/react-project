@@ -66,8 +66,9 @@ export default {
     ),
     new webpack.DefinePlugin({
       __CLIENT__: false,
-      __SERVER__: true,
-      __DEVTOOLS__: false
+      __DEV__: process.env.NODE_ENV === 'development',
+      __DEVTOOLS__: false,
+      __SERVER__: true
     })
   ]
 }

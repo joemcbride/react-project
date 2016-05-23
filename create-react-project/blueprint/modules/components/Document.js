@@ -1,4 +1,5 @@
 import React from 'react'
+import serialize from 'serialize-javascript'
 import favicon from '../favicon.ico'
 
 const { arrayOf, string, node, object } = React.PropTypes
@@ -20,7 +21,7 @@ const Document = React.createClass({
   },
 
   render() {
-    const { styles, scripts, content, title } = this.props
+    const { styles, scripts, content, title, initialState } = this.props
 
     return (
       <html>
@@ -32,6 +33,7 @@ const Document = React.createClass({
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{ __html: content }}/>
+          <script dangerouslySetInnerHTML={{ __html: `window.__data=${serialize(initialState)};` }} />
           <script dangerouslySetInnerHTML={{ __html: shims }}/>
           {scripts}
         </body>

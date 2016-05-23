@@ -8,4 +8,3 @@ export const PUBLIC_PATH = process.env.PUBLIC_PATH || '/'
 export const PUBLIC_DIR = path.join(APP_PATH, '.build')
 export const SERVER_RENDERING = process.env.SERVER_RENDERING === 'on'
 export const AUTO_RELOAD = process.env.AUTO_RELOAD
-
