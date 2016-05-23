@@ -14,7 +14,7 @@
     "react-project:start:dev": "eslint modules && react-project start",
     "react-project:start:prod": "rm -rf .build && react-project build && node .build/server.js",
     "postinstall": "babel ./node_modules/react-project/modules --out-dir ./node_modules/react-project/lib",
-    "mon": "nodemon --exec 'npm run react-project:start:dev'"
+    "mon": "nodemon --exec \"npm run react-project:start:dev\""
   },
   "author": "",
   "license": "ISC",
@@ -74,6 +74,6 @@
     "nodemon": "1.9.2",
     "redux-devtools": "3.3.1",
     "redux-devtools-dock-monitor": "1.1.1",
-    "redux-devtools-log-monitor": "1.0.11",
+    "redux-devtools-log-monitor": "1.0.11"
   }
 }

@@ -11,7 +11,8 @@
   "watch": [
     "modules/api",
     "modules/routes.js",
-    "modules/server.js"
+    "modules/server.js",
+    ".babelrc"
   ],
   "env": {
     "NODE_ENV": "development"
